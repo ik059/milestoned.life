@@ -9,40 +9,57 @@ interface ToolCardProps {
 }
 
 const ToolCard = ({
-    emoji, 
-    tag, 
-    title,
-    description,
-    features,
-    href,
-    color
-}: ToolCardProps)=>{
-    return(
-        <div className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all flex flex-col">
-            <div className="text-4xl mb-6">{emoji}</div>
-            <span className={`text-xs font-medium px-3 py-1 rounded-full w-fit mb-4 ${color}`}>{tag}</span>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">{description}</p>
-            <ul className="space-y-2 mb-8 flex-1">
-                {features.map((feature)=>(
-                    <li
-                    key={feature}
-                    className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="w-4 h-4 bg-green-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">✓</span>
-                        {feature}
-                    </li>
-                ))}
-            </ul>
-            <a
-                href={href}
-                className="w-full text-center bg-gray-900 text-white py-3 rounded-xl text-sm font-medium hover:bg-gray-700 transition-colors">
-                    Open Tool →
-                </a>
-            
-        </div>  
-    )
-}
+  emoji,
+  tag,
+  title,
+  description,
+  features,
+  href,
+  color,
+}: ToolCardProps) => {
+  return (
+    <div className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all flex flex-col">
 
+      {/* TOP — emoji icon */}
+      <div className="text-4xl mb-6">{emoji}</div>
+
+      {/* TAG — small label */}
+      <span className={`text-xs font-medium px-3 py-1 rounded-full w-fit mb-4 ${color}`}>
+        {tag}
+      </span>
+
+
+      <h3 className="text-xl font-bold text-gray-900 mb-3">
+        {title}
+      </h3>
+
+      <p className="text-gray-500 text-sm leading-relaxed mb-6">
+        {description}
+      </p>
+
+      <ul className="space-y-2 mb-8 flex-1">
+        {features.map((feature) => (
+          <li
+            key={feature}
+            className="flex items-center gap-2 text-sm text-gray-600"
+          >
+            <span className="w-4 h-4 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">
+              ✓
+            </span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a
+        href={href}
+        className="w-full text-center bg-gray-900 text-white py-3 rounded-xl text-sm font-medium hover:bg-gray-700 transition-colors"
+      >
+        Open Tool →
+      </a>
+
+    </div>
+  )
+}
 const tools = [
   {
     emoji: '📚',
@@ -80,7 +97,7 @@ const tools = [
 
 const Tools = ()=>{
     return(
-        <section id="tools" className="py-20 px-60">
+        <section id="tools" className="py-20 px-6">
             <div className="max-w-2xl mx-auto text-center mb-16">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                    Your tools for growth. 

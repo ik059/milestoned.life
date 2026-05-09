@@ -1,5 +1,8 @@
 import Navbar from './components/layout/Navbar'
-
+import Hero from './components/layout/Hero'
+import Features from './components/layout/Features'
+import Tools from './components/layout/Tools.tsx'
+import Footer from './components/layout/Footer.tsx'
 function App() {
 
   return (
@@ -7,9 +10,10 @@ function App() {
       <Navbar/>
 
       <main>
-        <h1 className="text-3xl font-bold text-center mt-20 text-gray-900">
-          Comming Soon . . .
-        </h1>
+        <Hero/>
+        <Features/>
+        <Tools/>
+        <Footer/>
       </main>
       
     </div>

@@ -74,7 +74,7 @@ const tools = [
       'Streak counter',
       'Visual progress charts',
     ],
-    href: 'https://learning-tracker.milestoned.life',
+    href: 'https://learning-tracker-milestoned-life.vercel.app/login',
     color: 'bg-purple-50 text-purple-600',
   },
   {
